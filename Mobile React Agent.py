@@ -18,6 +18,9 @@ from pydantic import BaseModel, Field, Extra
 from langchain.tools import BaseTool
 from playwright.sync_api import sync_playwright, Page, Response, Browser
 from langchain_core.callbacks.base import BaseCallbackHandler
+import langchain
+
+langchain.debug = True
 
 os.environ["LANGCHAIN_TRACING_V2"] = "True"
 os.environ["LANGCHAIN_API_KEY"] = "ls__18fd3bc1dc4146629d6831e0c0fd9ad8"
@@ -127,7 +130,7 @@ tools = [
 ]
 
 #llm = Ollama(model="phi3")
-llm = ChatOpenAI(base_url="http://localhost:11434/v1/", model="phi3", api_key="None")
+llm = ChatOpenAI(base_url="http://localhost:11434/v1/", model="phi3", api_key="None", streaming=True)
 llm_with_tools = llm.bind_tools(tools)
 
 username = getpass.getuser()

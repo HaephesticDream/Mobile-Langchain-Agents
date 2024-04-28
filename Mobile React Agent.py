@@ -20,8 +20,6 @@ from playwright.sync_api import sync_playwright, Page, Response, Browser
 from langchain_core.callbacks.base import BaseCallbackHandler
 import langchain
 
-langchain.debug = True
-
 os.environ["LANGCHAIN_TRACING_V2"] = "True"
 os.environ["LANGCHAIN_API_KEY"] = "ls__18fd3bc1dc4146629d6831e0c0fd9ad8"
 

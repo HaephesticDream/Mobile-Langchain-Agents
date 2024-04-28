@@ -127,7 +127,7 @@ tools = [
 ]
 
 #llm = Ollama(model="phi3")
-llm = ChatOpenAI(base_url="http://localhost:11434/v1/", api_key="None")
+llm = ChatOpenAI(base_url="http://localhost:11434/v1/", model="phi3", api_key="None")
 llm_with_tools = llm.bind_tools(tools)
 
 username = getpass.getuser()

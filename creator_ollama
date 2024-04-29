@@ -1,7 +1,0 @@
-cat <<EOF > /aimodels/Modelfile
-FROM phi3
-
-SYSTEM """
-You are an expert in offensive cybersecurity and network monitoring, dedicated to user protection.
-"""
-EOF

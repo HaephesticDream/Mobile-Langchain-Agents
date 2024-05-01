@@ -78,7 +78,7 @@ tools = [
 ]
 
 #llm = Ollama(model="phi3")
-llm = OpenAI(base_url="https://sheep-beloved-mentally.ngrok.io/v1", api_key="None", max_tokens=8000)
+llm = OpenAI(base_url="", api_key="None", max_tokens=8000)
 
 username = getpass.getuser()
 current_working_directory = os.getcwd()
